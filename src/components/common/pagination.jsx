@@ -2,10 +2,7 @@ import React from "react";
 import _ from "lodash"; // underscore library
 import PropTypes from "prop-types";
 
-const Pagination = (props) => {
-  const { itemsCount, pageSize, currentPage, onPageChange } = props;
-  // console.log(currentPage);
-
+const Pagination = ({ itemsCount, pageSize, currentPage, onPageChange }) => {
   const pagesCount = Math.ceil(itemsCount / pageSize);
   if (pagesCount === 1) return null; // if there's only 1 page, don't show pagination
   const pages = _.range(1, pagesCount + 1);
