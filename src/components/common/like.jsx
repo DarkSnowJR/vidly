@@ -1,9 +1,17 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-class Like extends Component {
-  render() {
-    return <i class="fa fa-heart-o" aria-hidden="true"></i>;
-  }
-}
+const Like = (props) => { // Stateless Functional Component
+  let classes = "fa fa-heart";
+  if (!props.liked) classes += "-o";
+
+  return (
+    <i
+      onClick={props.onClick}
+      className={classes}
+      aria-hidden="true"
+      style={{ cursor: "pointer" }}
+    ></i>
+  );
+};
 
 export default Like;
