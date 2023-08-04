@@ -1,6 +1,7 @@
-// import React, { Component } from "react";
+import React from "react";
 
-const Like = (props) => { // Stateless Functional Component
+// Stateless Functional Component
+const Like = (props) => {
   let classes = "fa fa-heart";
   if (!props.liked) classes += "-o";
 
